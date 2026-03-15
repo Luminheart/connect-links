@@ -41,13 +41,47 @@
             font-weight: 400;
         }
 
-        p { 
-            font-size: 0.8rem; 
-            margin-bottom: 40px; 
-            color: #F5F5DC; 
-            letter-spacing: 4px; /* Very high-end spacing */
-            text-transform: uppercase;
-            opacity: 0.8;
+        /* HIGHLIGHTS SECTION */
+        .highlights-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 35px;
+            width: 100%;
+        }
+
+        .highlight-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .highlight-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid #E6BE8A;
+            background-color: #F5F5DC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-circle:hover {
+            transform: scale(1.1);
+            background-color: #E6BE8A;
+        }
+
+        .highlight-label {
+            font-size: 0.7rem;
+            color: #F5F5DC;
+            margin-top: 8px;
+            text-transform: lowercase;
+            font-style: italic;
+            letter-spacing: 1px;
         }
         
         .links-wrapper { 
@@ -69,12 +103,11 @@
             text-align: center;
             display: block;
             font-size: 1.1rem;
-            position: relative; /* Needed for the shimmer */
-            overflow: hidden;   /* Keeps shimmer inside the button */
+            position: relative;
+            overflow: hidden;
             transition: all 0.4s ease;
         }
 
-        /* THE GOLD SHIMMER EFFECT */
         .link-card::after {
             content: "";
             position: absolute;
@@ -82,20 +115,15 @@
             left: -100%;
             width: 50%;
             height: 100%;
-            background: linear-gradient(
-                to right, 
-                transparent, 
-                rgba(230, 190, 138, 0.4), 
-                transparent
-            );
+            background: linear-gradient(to right, transparent, rgba(230, 190, 138, 0.4), transparent);
             transform: skewX(-25deg);
             animation: shimmer 4s infinite;
         }
 
         @keyframes shimmer {
             0% { left: -100%; }
-            20% { left: 150%; } /* Fast slide */
-            100% { left: 150%; } /* Long pause before next shine */
+            20% { left: 150%; }
+            100% { left: 150%; }
         }
 
         .link-card:hover {
@@ -143,6 +171,21 @@
     <p style="font-style: italic; letter-spacing: 2px; text-transform: lowercase; opacity: 0.9; margin-top: -10px; margin-bottom: 40px;">
         waxes to warm the soul
     </p>
+
+    <div class="highlights-container">
+        <a href="#" class="highlight-item">
+            <div class="highlight-circle">🕯️</div>
+            <span class="highlight-label">new in</span>
+        </a>
+        <a href="#" class="highlight-item">
+            <div class="highlight-circle">✨</div>
+            <span class="highlight-label">our story</span>
+        </a>
+        <a href="#" class="highlight-item">
+            <div class="highlight-circle">🤍</div>
+            <span class="highlight-label">favorites</span>
+        </a>
+    </div>
     
     <div class="links-wrapper">
         <a href="https://www.facebook.com/profile.php?id=61586576870341" class="link-card">Facebook</a>
@@ -150,6 +193,7 @@
         <a href="https://www.instagram.com/_luminheart_/" class="link-card">Instagram</a>
         <a href="https://uk.pinterest.com/luminheart/" class="link-card">Pinterest</a>
     </div>
+
     <button class="copy-btn" onclick="copyToClipboard()">🔗 Copy My Hub Link</button>
 
     <footer>Private & Secure Hub</footer>
