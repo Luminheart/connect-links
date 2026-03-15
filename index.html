@@ -4,96 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luminheart | Connect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
     <style>
-        :root {
-            --primary-pink: #ff85a1;
-            --soft-pink: #fbb1bd;
-            --bg-gradient: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-            --text-dark: #4a4a4a;
-        }
         body {
-    /* A deep charcoal that makes the Champagne Gold pop */
-    background-color: #1a1a1a; 
-    color: #E6BE8A; /* Champagne Gold text for any labels */
-    margin: 0;
-    padding: 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-       }
+            background-color: #1a1a1a; /* Dark Charcoal */
+            color: #E6BE8A;           /* Champagne Gold */
+            margin: 0;
+            padding: 20px;
+            font-family: 'Instrument Serif', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
         .container {
             width: 100%;
             max-width: 380px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 40px 20px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.8);
+            padding: 20px;
         }
-        .heart-icon {
-            font-size: 40px;
-            color: var(--primary-pink);
-            margin-bottom: 10px;
+
+        .logo-img {
+            width: 120px;
+            border-radius: 50%;
+            border: 1px solid #E6BE8A;
+            margin-bottom: 25px;
+            box-shadow: 0 0 15px rgba(230, 190, 138, 0.2);
         }
-        h1 { font-size: 1.6rem; margin-bottom: 5px; color: var(--text-dark); }
-        p { font-size: 0.9rem; margin-bottom: 30px; opacity: 0.7; }
+
+        h1 { 
+            font-size: 2.8rem; 
+            margin-bottom: 5px; 
+            color: #E6BE8A; 
+            font-weight: 400;
+        }
+
+        p { 
+            font-size: 0.8rem; 
+            margin-bottom: 40px; 
+            color: #F5F5DC; 
+            letter-spacing: 4px; /* Very high-end spacing */
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
         
-        .links-wrapper { display: flex; flex-direction: column; gap: 12px; }
+        .links-wrapper { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            gap: 18px; 
+        }
         
         .link-card {
-            background: white;
-            padding: 16px;
-            border-radius: 50px;
+            background-color: #F5F5DC;   
+            color: #1a1a1a;              
+            border: 1px solid #E6BE8A;   
+            border-radius: 2px;
+            padding: 18px;
             text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            display: block;
+            font-size: 1.1rem;
+            position: relative; /* Needed for the shimmer */
+            overflow: hidden;   /* Keeps shimmer inside the button */
+            transition: all 0.4s ease;
         }
-.link-card {
-    background-color: #F5F5DC;   /* Creamy Beige */
-    color: #1a1a1a;              /* Charcoal Black text for readability */
-    border: 2px solid #E6BE8A;   /* Champagne Gold Border */
-    border-radius: 4px;          /* Sharp, expensive-looking corners */
-    padding: 15px;
-    margin: 10px 0;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-weight: 600;
-    letter-spacing: 1.5px;       /* Editorial spacing */
-    text-transform: uppercase;   /* High-fashion look */
-    transition: all 0.4s ease;   /* Smooth color transition */
-}
 
-.link-card:hover {
-    background-color: #E6BE8A;   /* Fills with Champagne Gold on tap */
-    color: #ffffff;              /* White text when active */
-    transform: translateY(-2px); /* Slight lift effect */
-}        .copy-btn:hover { background: rgba(255, 133, 161, 0.1); }
+        /* THE GOLD SHIMMER EFFECT */
+        .link-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right, 
+                transparent, 
+                rgba(230, 190, 138, 0.4), 
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: shimmer 4s infinite;
+        }
 
-        footer { margin-top: 40px; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.4; }
+        @keyframes shimmer {
+            0% { left: -100%; }
+            20% { left: 150%; } /* Fast slide */
+            100% { left: 150%; } /* Long pause before next shine */
+        }
+
+        .link-card:hover {
+            background-color: #E6BE8A;   
+            color: #ffffff;              
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230, 190, 138, 0.3);
+        }
+
+        .copy-btn { 
+            background: transparent;
+            color: #E6BE8A;
+            border: 1px solid #E6BE8A;
+            padding: 12px 24px;
+            margin-top: 40px;
+            font-family: 'Instrument Serif', serif;
+            font-style: italic;
+            cursor: pointer;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: #E6BE8A;
+            color: #1a1a1a;
+        }
+
+        footer { 
+            margin-top: 60px; 
+            font-size: 0.65rem; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            color: #F5F5DC;
+            opacity: 0.4; 
+        }
     </style>
 </head>
 <body>
-<div style="text-align: center; padding: 20px 0;">
-        <img src="Luminheart.jpg" alt="Luminheart Logo" style="width: 120px; border-radius: 50%;">
-    </div><div class="container">
-    <div class="heart-icon">♥</div>
+
+<div class="container">
+    <img src="Luminheart.jpg" alt="Luminheart Logo" class="logo-img">
+
     <h1>Luminheart</h1>
-    <p>Find me on social media</p>
+    <p>Collective Hub</p>
     
     <div class="links-wrapper">
-        <a href="https://www.facebook.com/profile.php?id=61586576870341link-card">Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61586576870341" class="link-card">Facebook</a>
         <a href="https://www.tiktok.com/@.luminheart" class="link-card">TikTok</a>
-<a href="https://www.instagram.com/_luminheart_/" class="link-card">Instagram</a>
-        <a href="https://uk.pinterest.com/luminheart/ class="link-card">Pinterest</a>
+        <a href="https://www.instagram.com/_luminheart_/" class="link-card">Instagram</a>
+        <a href="https://uk.pinterest.com/luminheart/" class="link-card">Pinterest</a>
     </div>
 
     <button class="copy-btn" onclick="copyToClipboard()">🔗 Copy My Hub Link</button>
