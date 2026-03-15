@@ -76,6 +76,13 @@
             transition: all 0.4s ease;
         }
 
+        /* Etsy highlight effect */
+        .link-card.primary {
+            background-color: #E6BE8A;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+
         .link-card::after {
             content: "";
             position: absolute;
@@ -83,7 +90,7 @@
             left: -100%;
             width: 50%;
             height: 100%;
-            background: linear-gradient(to right, transparent, rgba(230, 190, 138, 0.4), transparent);
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
             transform: skewX(-25deg);
             animation: shimmer 4s infinite;
         }
@@ -101,7 +108,6 @@
             box-shadow: 0 5px 15px rgba(230, 190, 138, 0.3);
         }
 
-        /* HIGHLIGHTS SECTION */
         .highlights-container {
             display: flex;
             justify-content: center;
@@ -172,6 +178,8 @@
     <p class="tagline">waxes to warm the soul</p>
     
     <div class="links-wrapper">
+        <a href="https://www.etsy.com/uk/shop/Luminheartuk" class="link-card primary">Shop on Etsy</a>
+        
         <a href="https://www.facebook.com/profile.php?id=61586576870341" class="link-card">Facebook</a>
         <a href="https://www.tiktok.com/@.luminheart" class="link-card">TikTok</a>
         <a href="https://www.instagram.com/_luminheart_/" class="link-card">Instagram</a>
@@ -179,7 +187,7 @@
     </div>
 
     <div class="highlights-container">
-        <a href="#" class="highlight-item">
+        <a href="https://www.etsy.com/uk/shop/Luminheartuk" class="highlight-item">
             <div class="highlight-circle">🕯️</div>
             <span class="highlight-label">new in</span>
         </a>
