@@ -12,17 +12,16 @@
             --text-dark: #4a4a4a;
         }
         body {
-         
-            background: var(--bg-gradient);
-            color: var(--text-dark);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+    /* A deep charcoal that makes the Champagne Gold pop */
+    background-color: #1a1a1a; 
+    color: #E6BE8A; /* Champagne Gold text for any labels */
+    margin: 0;
+    padding: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+       }
         .container {
             width: 100%;
             max-width: 380px;
@@ -55,25 +54,29 @@
             border: 2px solid transparent;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
-        .link-card:hover {
-            border-color: var(--soft-pink);
-            transform: scale(1.02);
-            background: #fffafa;
-        }
-        
-        /* Copy Button Styling */
-        .copy-btn {
-            margin-top: 25px;
-            background: none;
-            border: 1px dashed var(--primary-pink);
-            color: var(--primary-pink);
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            transition: 0.3s;
-        }
-        .copy-btn:hover { background: rgba(255, 133, 161, 0.1); }
+.link-card {
+    background-color: #F5F5DC;   /* Creamy Beige */
+    color: #1a1a1a;              /* Charcoal Black text for readability */
+    border: 2px solid #E6BE8A;   /* Champagne Gold Border */
+    border-radius: 4px;          /* Sharp, expensive-looking corners */
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1.5px;       /* Editorial spacing */
+    text-transform: uppercase;   /* High-fashion look */
+    transition: all 0.4s ease;   /* Smooth color transition */
+}
+
+.link-card:hover {
+    background-color: #E6BE8A;   /* Fills with Champagne Gold on tap */
+    color: #ffffff;              /* White text when active */
+    transform: translateY(-2px); /* Slight lift effect */
+}        .copy-btn:hover { background: rgba(255, 133, 161, 0.1); }
 
         footer { margin-top: 40px; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.4; }
     </style>
