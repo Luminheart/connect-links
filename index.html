@@ -8,8 +8,8 @@
     
     <style>
         body {
-            background-color: #1a1a1a; /* Dark Charcoal */
-            color: #E6BE8A;           /* Champagne Gold */
+            background-color: #1a1a1a;
+            color: #E6BE8A;
             margin: 0;
             padding: 20px;
             font-family: 'Instrument Serif', serif;
@@ -41,49 +41,17 @@
             font-weight: 400;
         }
 
-        /* HIGHLIGHTS SECTION */
-        .highlights-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 35px;
-            width: 100%;
-        }
-
-        .highlight-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .highlight-circle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 1px solid #E6BE8A;
-            background-color: #F5F5DC;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            transition: transform 0.3s ease;
-        }
-
-        .highlight-circle:hover {
-            transform: scale(1.1);
-            background-color: #E6BE8A;
-        }
-
-        .highlight-label {
-            font-size: 0.7rem;
+        .tagline {
+            font-style: italic; 
+            letter-spacing: 2px; 
+            text-transform: lowercase; 
+            opacity: 0.9; 
+            margin-top: -10px; 
+            margin-bottom: 40px;
             color: #F5F5DC;
-            margin-top: 8px;
-            text-transform: lowercase;
-            font-style: italic;
-            letter-spacing: 1px;
+            font-size: 1.1rem;
         }
-        
+
         .links-wrapper { 
             display: flex; 
             flex-direction: column; 
@@ -133,6 +101,44 @@
             box-shadow: 0 5px 15px rgba(230, 190, 138, 0.3);
         }
 
+        /* HIGHLIGHTS SECTION */
+        .highlights-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .highlight-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .highlight-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid #E6BE8A;
+            background-color: #F5F5DC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-label {
+            font-size: 0.75rem;
+            color: #F5F5DC;
+            margin-top: 8px;
+            text-transform: lowercase;
+            font-style: italic;
+        }
+
         .copy-btn { 
             background: transparent;
             color: #E6BE8A;
@@ -145,11 +151,6 @@
             border-radius: 2px;
             letter-spacing: 1px;
             transition: 0.3s;
-        }
-
-        .copy-btn:hover {
-            background: #E6BE8A;
-            color: #1a1a1a;
         }
 
         footer { 
@@ -168,17 +169,7 @@
     <img src="Luminheart.jpg" alt="Luminheart Logo" class="logo-img">
 
     <h1>Luminheart</h1>
-    <p style="font-style: italic; letter-spacing: 2px; text-transform: lowercase; opacity: 0.9; margin-top: -10px; margin-bottom: 40px;">
-        waxes to warm the soul
-    </p>
-
-  <div class="container">
-    <img src="Luminheart.jpg" alt="Luminheart Logo" class="logo-img">
-
-    <h1>Luminheart</h1>
-    <p style="font-style: italic; letter-spacing: 2px; text-transform: lowercase; opacity: 0.9; margin-top: -10px; margin-bottom: 40px;">
-        waxes to warm the soul
-    </p>
+    <p class="tagline">waxes to warm the soul</p>
     
     <div class="links-wrapper">
         <a href="https://www.facebook.com/profile.php?id=61586576870341" class="link-card">Facebook</a>
@@ -187,7 +178,7 @@
         <a href="https://uk.pinterest.com/luminheart/" class="link-card">Pinterest</a>
     </div>
 
-    <div class="highlights-container" style="margin-top: 40px;">
+    <div class="highlights-container">
         <a href="#" class="highlight-item">
             <div class="highlight-circle">🕯️</div>
             <span class="highlight-label">new in</span>
@@ -206,6 +197,7 @@
 
     <footer>Private & Secure Hub</footer>
 </div>
+
 <script>
     function copyToClipboard() {
         const url = window.location.href;
