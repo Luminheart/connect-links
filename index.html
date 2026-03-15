@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminheart | Connect</title>
+    <style>
+        :root {
+            --primary-pink: #ff85a1;
+            --soft-pink: #fbb1bd;
+            --bg-gradient: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            --text-dark: #4a4a4a;
+        }
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+        .heart-icon {
+            font-size: 40px;
+            color: var(--primary-pink);
+            margin-bottom: 10px;
+        }
+        h1 { font-size: 1.6rem; margin-bottom: 5px; color: var(--text-dark); }
+        p { font-size: 0.9rem; margin-bottom: 30px; opacity: 0.7; }
+        
+        .links-wrapper { display: flex; flex-direction: column; gap: 12px; }
+        
+        .link-card {
+            background: white;
+            padding: 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .link-card:hover {
+            border-color: var(--soft-pink);
+            transform: scale(1.02);
+            background: #fffafa;
+        }
+        
+        /* Copy Button Styling */
+        .copy-btn {
+            margin-top: 25px;
+            background: none;
+            border: 1px dashed var(--primary-pink);
+            color: var(--primary-pink);
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+        .copy-btn:hover { background: rgba(255, 133, 161, 0.1); }
+
+        footer { margin-top: 40px; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.4; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="heart-icon">♥</div>
+    <h1>Luminheart</h1>
+    <p>Find me on social media</p>
+    
+    <div class="links-wrapper">
+        <a href="https://www.facebook.com/profile.php?id=61586576870341link-card">Facebook</a>
+        <a href="ttps://www.tiktok.com/@.luminheart?lang=en>TikTok</a>
+        <a href="https://www.instagram.com/ class="link-card">Instagram</a>
+        <a href="https://uk.pinterest.com/luminheart/ class="link-card">Pinterest</a>
+    </div>
+
+    <button class="copy-btn" onclick="copyToClipboard()">🔗 Copy My Hub Link</button>
+
+    <footer>Private & Secure Hub</footer>
+</div>
+
+<script>
+    function copyToClipboard() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            const btn = document.querySelector('.copy-btn');
+            btn.innerText = "✅ Link Copied!";
+            setTimeout(() => { btn.innerText = "🔗 Copy My Hub Link"; }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
