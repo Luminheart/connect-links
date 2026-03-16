@@ -19,18 +19,25 @@
             min-height: 100vh;
         }
 
+        /* FADE-IN ANIMATION */
         .container {
             width: 100%;
             max-width: 380px;
             text-align: center;
             padding: 20px;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .logo-img {
             width: 120px;
             border-radius: 50%;
             border: 1px solid #E6BE8A;
-            margin-bottom: 10px; /* Tightened as requested */
+            margin-bottom: 10px;
             box-shadow: 0 0 15px rgba(230, 190, 138, 0.2);
         }
 
@@ -99,7 +106,7 @@
             100% { left: 150%; }
         }
 
-        /* HIGHLIGHTS */
+        /* HIGHLIGHTS WITH HOVER MAGIC */
         .highlights-container {
             display: flex;
             justify-content: center;
@@ -114,6 +121,11 @@
             align-items: center;
             text-decoration: none;
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-item:active {
+            transform: scale(0.95);
         }
 
         .highlight-circle {
@@ -125,7 +137,14 @@
             justify-content: center;
             align-items: center;
             font-size: 24px;
-            transition: 0.3s;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover .highlight-circle {
+            transform: scale(1.1);
+            background-color: #E6BE8A;
+            box-shadow: 0 0 15px rgba(230, 190, 138, 0.5);
+            border-color: #F5F5DC;
         }
 
         .highlight-label {
@@ -175,8 +194,17 @@
             cursor: pointer;
         }
 
+        .mood-quote {
+            margin-top: 50px;
+            font-style: italic;
+            font-size: 0.95rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+            color: #F5F5DC;
+        }
+
         footer { 
-            margin-top: 60px; 
+            margin-top: 30px; 
             font-size: 0.65rem; 
             letter-spacing: 3px; 
             text-transform: uppercase; 
@@ -200,7 +228,7 @@
         <a href="https://uk.pinterest.com/luminheart/" class="link-card">Pinterest</a>
     </div>
 
-<div class="highlights-container">
+    <div class="highlights-container">
         <div class="highlight-item" onclick="openStory()">
             <div class="highlight-circle">✨</div>
             <span class="highlight-label">our story</span>
@@ -215,7 +243,12 @@
             <div class="highlight-circle">⭐</div>
             <span class="highlight-label">reviews</span>
         </a>
-    </div>    <button class="copy-btn" onclick="copyToClipboard()">🔗 Copy My Hub Link</button>
+    </div>
+
+    <button class="copy-btn" onclick="copyToClipboard()">🔗 Copy My Hub Link</button>
+    
+    <p class="mood-quote">"Bringing the warmth of the countryside into your home."</p>
+
     <footer>Private & Secure Hub</footer>
 </div>
 
@@ -233,7 +266,7 @@
             homely luxury for everyone.
         </p>
     </div>
-</div></div>
+</div>
 
 <script>
     function copyToClipboard() {
