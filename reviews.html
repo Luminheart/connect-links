@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminheart | Reviews</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #E6BE8A;
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 { 
+            font-family: 'Instrument Serif', serif;
+            font-size: 3.5rem; 
+            margin: 0 0 10px 0;
+            color: #E6BE8A; 
+            font-weight: 400;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #F5F5DC;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .reviews-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .review-card {
+            background-color: #242424;
+            border: 1px solid rgba(230, 190, 138, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .stars {
+            color: #E6BE8A;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .review-text {
+            color: #F5F5DC;
+            font-style: italic;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+            font-size: 1.05rem;
+        }
+
+        .review-author {
+            color: #E6BE8A;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            background-color: #E6BE8A;
+            color: #1a1a1a;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(230, 190, 138, 0.4);
+        }
+
+        footer { 
+            margin-top: 60px; 
+            font-size: 0.6rem; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            opacity: 0.4; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Kind Words</h1>
+    <p class="subtitle">Handwritten notes from our lovely customers</p>
+    
+    <div class="reviews-list">
+        
+        <!-- REVIEW 1 -->
+        <div class="review-card">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"The countryside scents are absolutely divine. It filled my entire home with warmth and comfort."</p>
+            <p class="review-author">— Sarah M.</p>
+        </div>
+
+        <!-- REVIEW 2 -->
+        <div class="review-card">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Beautifully packaged and burns so cleanly. You can genuinely tell these are poured with heart."</p>
+            <p class="review-author">— James T.</p>
+        </div>
+
+        <!-- FUTURE REVIEWS GO RIGHT ABOVE THIS LINE -->
+
+    </div>
+
+    <!-- Back to Hub Button -->
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Main Menu
+    </a>
+
+    <footer>Luminheart Wax Co.</footer>
+</div>
+
+</body>
+</html>
